@@ -1,0 +1,17 @@
+/* Light Mode Gradient */
+.light-mode-text-gradient {
+  background: linear-gradient(to right, #030b3d, #105abf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Dark Mode Gradient */
+.dark-mode-text-gradient {
+  background: linear-gradient(to right, #8eeffd, #1e3351);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Optional: Add additional styles to control font size or weight if needed */
