@@ -10,14 +10,14 @@ import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <AboutSnippet />
       <Aabout />
       <Experience />
       <Services />
       <NewsTicker />
       {/* <About /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
