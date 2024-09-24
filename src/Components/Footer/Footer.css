@@ -1,4 +1,9 @@
 /* General footer styles */
+
+[lang="ar"] .pageRTL {
+  direction: rtl;
+}
+
 .footer {
   position: relative;
   z-index: 10;

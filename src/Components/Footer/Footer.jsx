@@ -3,15 +3,17 @@ import { useSelector } from "react-redux";
 import logo1 from "../../assets/Img/pathteachlogo.png"; // Light mode logo
 import logo2 from "../../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
 import "./Footer.css"; // Include CSS for gradient text
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const isRealyDark = useSelector((state) => state.mode.isDark);
-
+  const { t, i18n } = useTranslation();
   return (
     <div
-      className={`container-fluid footer py-3 ${
+      className={`container-fluid footer pageRTL py-3 ${
         isRealyDark ? "dark-mode-footer" : "light-mode-footer"
-      } wow fadeIn`}
+      }`}
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
       data-wow-delay="0.2s"
       style={{
         backdropFilter: "blur(10px)", // Adding blur effect to the background

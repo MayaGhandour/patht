@@ -1,5 +1,18 @@
 {
   "lang": "lang",
+  "search": "search",
+  "header": {
+    "about": "About",
+    "solutions": "Solutions",
+    "services": "Services",
+    "strategy": "Strategy",
+    "contact": "Contact Us"
+  },
+  "count": {
+    "count1": "Experience in Saudi Market",
+    "count2": "Successful Project",
+    "count3": "Satisfied Customer"
+  },
   "about": {
     "h1": " Welcome To PathTECH",
     "title": "Empowering Your Business with Technology",
@@ -28,10 +41,34 @@
     "title": "We offer a range of exceptional services designed to shape your vision and create unique experiences that stand out.",
     "serv1": "Project Management Consulting",
     "serv2": "PMO Setup",
-    "serv3": "Training & Coaching",
+    "serv3": "Tenders & Bids",
+    "serv4": "Training & Coaching",
+    "serv5": "PPM (SaaS)",
+    "serv6": "Citizen Developer",
     "detailsol1": "Our expert consultants offer top-tier project management consulting services, ensuring streamlined workflows, efficient resource utilization, and successful project delivery, all while prioritizing sustainable practices.",
     "detailsol2": "Transform your projects with our expert Project Management Office (PMO) setup, ensuring streamlined processes and optimal project delivery. Harness our proven methodologies to drive efficiency and success across your organization.",
-    "detailsol3": "Empower your projects with our owner-focused bid management solutions & RFP designed to streamline procurement processes and enhance project outcomes. Trust us to navigate the complexities of bidding, ensuring cost-efficiency and quality in every project endeavor."
+    "detailsol3": "Empower your projects with our owner-focused bid management solutions & RFP designed to streamline procurement processes and enhance project outcomes. Trust us to navigate the complexities of bidding, ensuring cost-efficiency and quality in every project endeavor.",
+    "detailsol4": "Unlock your team’s full potential with our comprehensive Project Management training programs from world-class authorized providers PMI & AXELOS, equipping them with essential skills and strategies for successful project delivery. Elevate your organization’s project execution capabilities and drive sustainable growth with our tailored training solutions.",
+    "detailsol5": "Maximize your project portfolio’s efficiency and success with our intuitive Portfolio Project Management (PPM) SaaS applications like Smartsheet, Procure, ClickUp, and more. Harness the power of data-driven insights and streamlined workflows to optimize resource allocation and drive strategic decision-making",
+    "detailsol6": "Empower your team to create custom applications, automate workflows, and derive actionable insights, driving innovation and efficiency across your organization with our comprehensive services utilizing Microsoft Power Apps, Power Automate, and Power BI."
   },
-  "partner": "Key Partners"
+  "partner": "Key Partners",
+  "aboutPage": {
+    "title1": "Technological Excellence",
+    "title2": "Commitment to Innovation",
+    "title3": "Transforming Industries",
+    "title4": "Improving Lives",
+    "text1": "At PathTech, we are driven by a singular vision: to become the leading force in advanced technology across Saudi Arabia. Our commitment is to innovate and provide exceptional technological solutions that transform industries and improve lives.",
+    "text2": "Complying with Saudi’s Vision 2030, PathTech’s dedication to innovation is unwavering. We invest heavily in research and development to stay ahead of the curve, ensuring our products and services are at the forefront of technological advancements. Our team of experts continuously explores new frontiers, pushing the boundaries of what is possible.",
+    "text3": "We aim to revolutionize various sectors by integrating cutting-edge technology into everyday processes. From healthcare to finance, our solutions are designed to enhance efficiency, security, and productivity, creating a more connected and advanced society in Saudi Arabia.",
+    "text4": "Beyond industry transformation, PathTech is dedicated to improving the quality of life for individuals. Our technologies aim to provide better healthcare, smarter cities, and more sustainable practices, ensuring that every citizen can experience the benefits of our innovations.",
+    "value": "Our Value Proposition",
+    "valueText": "Experience Innovation and Excellence with PathTECH’s Unique Solutions",
+    "value1": "Innovative Solutions",
+    "value2": "Industry Collaboration",
+    "value3": "Exceptional Services",
+    "valueText1": "PathTECH offers cutting-edge solutions in Datacenter & Networking, Video Conference Systems, and Security, tailored to meet your business needs and ensure success.",
+    "valueText2": "Collaborating with technological leaders like Cisco, Huawei, and CommScope, PathTECH ensures top-notch quality and expertise in every project, setting new industry standards.",
+    "valueText3": "From Project Management Consultancy to Training & Coaching, PathTECH delivers exceptional services that transform visions into reality and drive business growth."
+  }
 }

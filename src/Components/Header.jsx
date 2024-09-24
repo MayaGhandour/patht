@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   const isRealyDark = useSelector((state) => state.mode.isDark);
   const showIcon = useSelector((state) => state.mode.showIcon);
@@ -36,7 +36,7 @@ const Header = () => {
   // }, [i18n.language]);
 
   return (
-    <div className="px-4 pb-4">
+    <div className="px-4 pb-4" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <nav
         className="navbar navbar-expand-lg fixed-top py-0 px-4"
         style={{
@@ -66,29 +66,91 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {["About", "Solutions", "Services", "Strategy", "ContactUs"].map(
-                (link) => (
-                  <li className="nav-item" key={link}>
-                    <NavLink
-                      className="nav-link"
-                      to={`/${link}`}
-                      style={{
-                        color: isRealyDark ? "#fff" : "transparent", // White in dark mode
-                        background: isRealyDark
-                          ? "none"
-                          : "linear-gradient(#030b3d, #105abf)",
-                        WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
-                        WebkitTextFillColor: isRealyDark
-                          ? "#fff"
-                          : "transparent", // Apply transparent fill in light mode
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {link}
-                    </NavLink>
-                  </li>
-                )
-              )}
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/about"
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.about")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/Solutions"
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.solutions")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/Services"
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.services")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/Strategy"
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.strategy")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className="nav-link"
+                  to="/ContactUs"
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.contact")}
+                </NavLink>
+              </li>
             </ul>
 
             <div className="d-flex align-items-center p-3">
@@ -96,11 +158,11 @@ const Header = () => {
                 <input
                   className="form-control me-2"
                   type="search"
-                  placeholder="Search"
+                  placeholder={t("search")}
                   aria-label="Search"
                 />
                 <button className="btn btn-outline-success" type="submit">
-                  Search
+                  {t("search")}
                 </button>
               </form>
 

@@ -5,13 +5,14 @@ import { useSelector } from "react-redux";
 import "./Hero.css"; // Make sure to include a CSS file for the gradient styles
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isRealyDark = useSelector((state) => state.mode.isDark);
 
   return (
     <>
       <div
-        className="w-100 position-relative d-flex align-items-center rounded"
+        className="w-100 position-relative d-flex align-items-center rounded "
+        dir={i18n.language === "ar" ? "rtl" : "ltr"}
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1)), url(${CarouselImg})`,
           backgroundSize: "cover",

@@ -5,9 +5,11 @@ import team1 from "../assets/Img/team-1.jpg";
 import team2 from "../assets/Img/team-2.jpg";
 import team3 from "../assets/Img/team-3.jpg";
 import team4 from "../assets/Img/team-4.jpg";
+import { useTranslation } from "react-i18next";
 const Team = () => {
+  const { t, i18n } = useTranslation();
   return (
-    <div>
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <div className="container-fluid team pb-5">
         <div className="container pb-5">
           <div

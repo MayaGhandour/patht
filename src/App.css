@@ -1,0 +1,18 @@
+/* Global Custom Scrollbar Styles */
+body {
+  /* You can add any other global styles for the body here */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c1c1c1; /* Background color of the scrollbar track */
+  border-radius: 5px; /* Round edges of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e7e7e7; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Round edges of the scrollbar thumb */
+}

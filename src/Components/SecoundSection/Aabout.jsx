@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import "./Aabout.css"; // Ensure you include this CSS file
 
 const Aabout = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isRealyDark = useSelector((state) => state.mode.isDark);
 
   // Reference for the section to track visibility
@@ -30,6 +30,7 @@ const Aabout = () => {
   return (
     <motion.section
       className="container my-5"
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
       ref={sectionRef} // Attach the ref to the section
       initial="hidden"
       animate={inView ? "visible" : "hidden"} // Trigger animation based on inView

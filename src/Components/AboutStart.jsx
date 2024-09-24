@@ -4,24 +4,23 @@ import web11 from "../assets/Img/11.webp";
 import web12 from "../assets/Img/12.webp";
 import web13 from "../assets/Img/13.webp";
 import web14 from "../assets/Img/14.webp";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 const AboutStart = () => {
+  const { t, i18n } = useTranslation();
+
+  const isRealyDark = useSelector((state) => state.mode.isDark);
   return (
-    <div>
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <div className="container-fluid about py-5">
         <div className="container py-5">
           <div className="row g-5 align-items-center">
             <div className="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
               <div>
                 <h1 className="display-5 mb-4 text-primary">
-                  Technological Excellence
+                  {t("aboutPage.title1")}
                 </h1>
-                <p className="mb-4">
-                  At PathTech, we are driven by a singular vision: to become the
-                  leading force in advanced technology across Saudi Arabia. Our
-                  commitment is to innovate and provide exceptional
-                  technological solutions that transform industries and improve
-                  lives.
-                </p>
+                <p className="mb-4">{t("aboutPage.text1")}</p>
               </div>
             </div>
             <div className="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
@@ -47,16 +46,9 @@ const AboutStart = () => {
             <div className="col-xl-7 wow fadeInRight" data-wow-delay="0.2s">
               <div>
                 <h1 className="display-5 mb-4 text-primary">
-                  Commitment to Innovation
+                  {t("aboutPage.title2")}
                 </h1>
-                <p className="mb-4">
-                  Complying with Saudi’s Vision 2030, PathTech’s dedication to
-                  innovation is unwavering. We invest heavily in research and
-                  development to stay ahead of the curve, ensuring our products
-                  and services are at the forefront of technological
-                  advancements. Our team of experts continuously explores new
-                  frontiers, pushing the boundaries of what is possible.
-                </p>
+                <p className="mb-4">{t("aboutPage.text2")}</p>
               </div>
             </div>
           </div>
@@ -64,15 +56,9 @@ const AboutStart = () => {
             <div className="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
               <div>
                 <h1 className="display-5 mb-4 text-primary">
-                  Transforming Industries
+                  {t("aboutPage.title3")}
                 </h1>
-                <p className="mb-4">
-                  We aim to revolutionize various sectors by integrating
-                  cutting-edge technology into everyday processes. From
-                  healthcare to finance, our solutions are designed to enhance
-                  efficiency, security, and productivity, creating a more
-                  connected and advanced society in Saudi Arabia.
-                </p>
+                <p className="mb-4">{t("aboutPage.text3")}</p>
               </div>
             </div>
             <div className="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
@@ -97,14 +83,11 @@ const AboutStart = () => {
             </div>
             <div className="col-xl-7 wow fadeInRight" data-wow-delay="0.2s">
               <div>
-                <h1 className="display-5 mb-4 text-primary">Improving Lives</h1>
-                <p className="mb-4">
-                  Beyond industry transformation, PathTech is dedicated to
-                  improving the quality of life for individuals. Our
-                  technologies aim to provide better healthcare, smarter cities,
-                  and more sustainable practices, ensuring that every citizen
-                  can experience the benefits of our innovations.
-                </p>
+                <h1 className="display-5 mb-4 text-primary">
+                  {" "}
+                  {t("aboutPage.title4")}
+                </h1>
+                <p className="mb-4">{t("aboutPage.text4")}</p>
               </div>
             </div>
           </div>

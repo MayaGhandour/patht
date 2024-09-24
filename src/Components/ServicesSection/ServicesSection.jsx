@@ -9,7 +9,7 @@ import "./Services.css"; // Include CSS for gradient text
 
 const ServicesSection = () => {
   const [selectedId, setSelectedId] = useState(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isRealyDark = useSelector((state) => state.mode.isDark);
 
   const serv = [
@@ -51,7 +51,10 @@ const ServicesSection = () => {
       >
         {t("service.title")}
       </motion.p>
-      <div className="d-flex justify-content-center">
+      <div
+        className="d-flex justify-content-center"
+        dir={i18n.language === "ar" ? "rtl" : "ltr"}
+      >
         <div
           style={{
             display: "flex",

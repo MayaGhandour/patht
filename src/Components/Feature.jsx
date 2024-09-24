@@ -1,8 +1,10 @@
 import React from "react";
 import "./Header.css";
+import { useTranslation } from "react-i18next";
 const Feature = () => {
+  const { t, i18n } = useTranslation();
   return (
-    <div>
+    <div dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <div className="container-fluid feature pb-5">
         <div className="container pb-5">
           <div
