@@ -1,18 +1,42 @@
-import React from "react";
-import CarouselImg from "../assets/Img/carousel-1.jpg"; // Adjust the image path as needed
+import React, { useRef } from "react";
+import CarouselImg from "../../assets/Img/carousel-1.jpg"; // Adjust the image path as needed
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { motion, useInView } from "framer-motion";
 import "./Aabout.css"; // Ensure you include this CSS file
 
 const Aabout = () => {
   const { t } = useTranslation();
   const isRealyDark = useSelector((state) => state.mode.isDark);
 
+  // Reference for the section to track visibility
+  const sectionRef = useRef(null);
+
+  // Check if the section is in view
+  const inView = useInView(sectionRef, { once: true, amount: 0.2 }); // Trigger when 20% of the section is visible
+
+  // Slide in from the left for text
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
+  // Slide in from the right for the image
+  const slideInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
   return (
-    <div className="container my-5">
+    <motion.section
+      className="container my-5"
+      ref={sectionRef} // Attach the ref to the section
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"} // Trigger animation based on inView
+    >
       <div className="row align-items-center">
         {/* Text Column */}
-        <div className="col-md-6">
+        <motion.div className="col-md-6" variants={slideInLeft}>
           <h2
             className={`mb-4 ${
               isRealyDark
@@ -40,6 +64,14 @@ const Aabout = () => {
           >
             {t("about2.snip2")}
           </p>
+          {/* <ReactTyped
+            string={["web", "", ""]}
+            typeSpeed={50}
+            backSpeed={30}
+            loop
+            backDelay={1500}
+          /> */}
+
           <ul>
             <li
               className={`${
@@ -78,10 +110,10 @@ const Aabout = () => {
               Tenders & Bids
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Background Image Column */}
-        <div className="col-md-6">
+        <motion.div className="col-md-6" variants={slideInRight}>
           <div
             className="w-100 rounded"
             style={{
@@ -92,9 +124,9 @@ const Aabout = () => {
               borderRadius: "10px",
             }}
           ></div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 

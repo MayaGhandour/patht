@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { TiAdjustBrightness } from "react-icons/ti";
-import { BsFillMoonFill } from "react-icons/bs";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
@@ -8,6 +7,8 @@ import { changeMode } from "../Redux/modeSlice";
 import "./Header.css";
 import logo1 from "../assets/Img/pathteachlogo.png"; // Light mode logo
 import logo2 from "../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const { i18n } = useTranslation();
@@ -30,9 +31,9 @@ const Header = () => {
       });
   };
 
-  useEffect(() => {
-    document.body.dir = i18n.language === "en" ? "ltr" : "rtl";
-  }, [i18n.language]);
+  // useEffect(() => {
+  //   document.body.dir = i18n.language === "en" ? "ltr" : "rtl";
+  // }, [i18n.language]);
 
   return (
     <div className="px-4 pb-4">
@@ -65,25 +66,29 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {["About", "Solutions", "Services", "Strategy"].map((link) => (
-                <li className="nav-item" key={link}>
-                  <NavLink
-                    className="nav-link"
-                    to={`/${link}`}
-                    style={{
-                      color: isRealyDark ? "#fff" : "transparent", // White in dark mode
-                      background: isRealyDark
-                        ? "none"
-                        : "linear-gradient(#030b3d, #105abf)",
-                      WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
-                      WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
-                      fontWeight: "bold",
-                    }}
-                  >
-                    {link}
-                  </NavLink>
-                </li>
-              ))}
+              {["About", "Solutions", "Services", "Strategy", "ContactUs"].map(
+                (link) => (
+                  <li className="nav-item" key={link}>
+                    <NavLink
+                      className="nav-link"
+                      to={`/${link}`}
+                      style={{
+                        color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                        background: isRealyDark
+                          ? "none"
+                          : "linear-gradient(#030b3d, #105abf)",
+                        WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                        WebkitTextFillColor: isRealyDark
+                          ? "#fff"
+                          : "transparent", // Apply transparent fill in light mode
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {link}
+                    </NavLink>
+                  </li>
+                )
+              )}
             </ul>
 
             <div className="d-flex align-items-center p-3">
@@ -106,14 +111,18 @@ const Header = () => {
                       className="icon2"
                       onClick={() => dispatch(changeMode())}
                     >
-                      <BsFillMoonFill size={20} />
+                      <FontAwesomeIcon
+                        icon={faMoon}
+                        size="1x"
+                        color="#030b3d"
+                      />
                     </div>
                   ) : (
                     <div
                       className="icon1"
                       onClick={() => dispatch(changeMode())}
                     >
-                      <TiAdjustBrightness size={20} color="white" />
+                      <FontAwesomeIcon icon={faSun} size="1x" color="white" />
                     </div>
                   )}
                 </div>

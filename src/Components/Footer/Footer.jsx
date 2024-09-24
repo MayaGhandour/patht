@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import logo1 from "../assets/Img/pathteachlogo.png"; // Light mode logo
-import logo2 from "../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
+import logo1 from "../../assets/Img/pathteachlogo.png"; // Light mode logo
+import logo2 from "../../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
 import "./Footer.css"; // Include CSS for gradient text
 
 const Footer = () => {

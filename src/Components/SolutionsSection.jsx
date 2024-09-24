@@ -48,7 +48,7 @@ const SolutionCard = ({ solution }) => {
   );
 };
 
-const Solutions = () => {
+const SolutionsSection = () => {
   const { t } = useTranslation();
   return (
     <>
@@ -71,4 +71,4 @@ const Solutions = () => {
   );
 };
 
-export default SectionWrapper(Solutions, "solutions");
+export default SectionWrapper(SolutionsSection, "solutions");

@@ -1,6 +1,6 @@
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import router from "./Routes/Router.jsx"; // Adjust the import path if necessary
+import router from "./Routes/Router"; // Adjust the import path if necessary
 import store from "./Redux/store.js"; // Redux store
 import { Provider } from "react-redux";
 import { I18nextProvider } from "react-i18next"; // i18next Provider
@@ -11,8 +11,8 @@ function App() {
     <>
       <Provider store={store}>
         <I18nextProvider i18n={i18n}>
-          <RouterProvider router={router} basename="/patht" />{" "}
-          {/* Set basename */}
+          <RouterProvider router={router} />
+          {/* <RouterProvider router={router} basename="/patht" />{" "} */}
         </I18nextProvider>
       </Provider>
     </>

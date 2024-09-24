@@ -16,11 +16,31 @@ export const textVariant = (delay) => {
   };
 };
 
-export const fadeIn = (direction, type, delay, duration) => {
+// utils/motion.js
+export const fadeIn = (
+  direction = "up",
+  type = "tween",
+  delay = 0,
+  duration = 0.75
+) => {
+  let x = 0;
+  let y = 0;
+
+  // Control movement direction based on the "direction" parameter
+  if (direction === "left") {
+    x = -100; // Move from left
+  } else if (direction === "right") {
+    x = 100; // Move from right
+  } else if (direction === "up") {
+    y = 100; // Move from bottom
+  } else if (direction === "down") {
+    y = -100; // Move from top
+  }
+
   return {
     hidden: {
-      x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x,
+      y,
       opacity: 0,
     },
     show: {
@@ -28,9 +48,9 @@ export const fadeIn = (direction, type, delay, duration) => {
       y: 0,
       opacity: 1,
       transition: {
-        type: type,
-        delay: delay,
-        duration: duration,
+        type,
+        delay,
+        duration,
         ease: "easeOut",
       },
     },

@@ -19,9 +19,9 @@ const StarWrapper = (Component, idName) =>
           isRealyDark ? "dark-mode-bg" : "light-mode-bg"
         }`}
       >
-        <span className="hash-span" id={idName}>
+        {/* <span className="hash-span" id={idName}>
           &nbsp;
-        </span>
+        </span> */}
 
         {/* Conditionally apply styles based on dark or light mode */}
         <Component />

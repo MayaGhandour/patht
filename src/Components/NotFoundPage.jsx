@@ -6,9 +6,10 @@ import Footer from "./Footer";
 const NotFoundPage = () => {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Home />
-      <Footer />
+      <Footer /> */}
+      not found page
     </div>
   );
 };

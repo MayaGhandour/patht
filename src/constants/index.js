@@ -1,20 +1,4 @@
-import { details, title } from "framer-motion/client";
-import { mobile, backend, creator, web } from "../assets/assets";
-
-// export const navLinks = [
-//   {
-//     id: "about",
-//     title: "About",
-//   },
-//   {
-//     id: "work",
-//     title: "Work",
-//   },
-//   {
-//     id: "contact",
-//     title: "Contact",
-//   },
-// ];
+import { mobile, backend, creator, web } from "../assets/Img";
 
 const solution = [
   {

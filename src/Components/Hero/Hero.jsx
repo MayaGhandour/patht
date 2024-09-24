@@ -1,10 +1,10 @@
 import React from "react";
-import CarouselImg from "../assets/Img/carousel-1.jpg";
+import CarouselImg from "../../assets/Img/carousel-1.jpg";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import "./AboutSnippet.css"; // Make sure to include a CSS file for the gradient styles
+import { useSelector } from "react-redux";
+import "./Hero.css"; // Make sure to include a CSS file for the gradient styles
 
-const AboutSnippet = () => {
+const Hero = () => {
   const { t } = useTranslation();
   const isRealyDark = useSelector((state) => state.mode.isDark);
 
@@ -95,4 +95,4 @@ const AboutSnippet = () => {
   );
 };
 
-export default AboutSnippet;
+export default Hero;
