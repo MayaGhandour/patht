@@ -9,9 +9,11 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer"; // استخدم مكتبة مراقبة التمرير
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 const Counter = () => {
   const { t, i18n } = useTranslation();
+  const isRealyDark = useSelector((state) => state.mode.isDark);
 
   const { ref, inView } = useInView({
     triggerOnce: true, // لتفعيل الحركة مرة واحدة فقط عند الوصول
@@ -56,16 +58,53 @@ const Counter = () => {
             },
           ].map((item, index) => (
             <motion.div
-              className="counter-item"
+              className="counter-item d-flex justify-content-center flex-column align-items-center"
               key={index}
-              custom={index} // نمرر الفهرس (index) للرسوم المتحركة
+              custom={index}
               initial="hidden"
-              animate={inView ? "visible" : "hidden"} // نتحقق من الحالة
+              animate={inView ? "visible" : "hidden"}
               variants={fadeIn}
+              style={{
+                color: isRealyDark ? "#030b3d" : "#d8faff", // Text color for title
+              }}
             >
-              <FontAwesomeIcon icon={item.icon} size="3x" />
-              <CountUp end={item.count} duration={4} suffix={item.suffix} />
-              <h4>{item.title}</h4>
+              <div
+                style={{
+                  // background: isRealyDark
+                  //   ? "linear-gradient(90deg, #1e3351, #8eeffd)" // Dark mode gradient
+                  //   : "linear-gradient(90deg, #105abf, #d8faff)", // Light mode gradient
+                  // borderRadius: "50%", // Make it round
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "60px", // Adjust the size of the container
+                  height: "60px",
+                }}
+              >
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  size="3x" // You can keep this as is for the icon size
+                  style={{
+                    color: isRealyDark ? "#d8faff" : "#030b3d", // Make icon transparent to show gradient
+                    WebkitBackgroundClip: "text", // Clip the background to text
+                    WebkitTextFillColor: "transparent", // Fill the text with transparent
+                  }}
+                />
+              </div>
+
+              <CountUp
+                end={item.count}
+                duration={4}
+                suffix={item.suffix}
+                style={{
+                  color: isRealyDark ? "#d8faff" : "#030b3d", // Counter color
+                  fontSize: "2.5rem", // Increase the font size here
+                  fontWeight: "bold", // Optional: make the counter bold
+                }}
+              />
+              <h4 style={{ color: isRealyDark ? "#d8faff" : "#030b3d" }}>
+                {item.title}
+              </h4>
             </motion.div>
           ))}
         </div>

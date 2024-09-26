@@ -14,7 +14,7 @@ const Hero = () => {
         className="w-100 position-relative d-flex align-items-center rounded "
         dir={i18n.language === "ar" ? "rtl" : "ltr"}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1)), url(${CarouselImg})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(85, 85, 85, 1)), url(${CarouselImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "50vw",

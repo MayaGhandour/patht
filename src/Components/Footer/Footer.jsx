@@ -40,7 +40,40 @@ const Footer = () => {
           </div>
 
           <div className="w-75 d-flex justify-content-around">
-            <div className="footer-item">
+            <div className="footer-item d-flex justify-content-center">
+              <div className="align-items-center justify-content-center">
+                <div className="d-flex align-items-center justify-content-center">
+                  <i
+                    className={`fa fa-phone-alt ${
+                      isRealyDark ? "text-light" : "text-dark"
+                    } me-3`}
+                  ></i>
+                  <p
+                    className={`mb-0 ${
+                      isRealyDark ? "text-light" : "text-dark"
+                    }`}
+                  >
+                    (+966) 11 242 8436
+                  </p>
+                </div>
+                <div className="d-flex align-items-center">
+                  <i
+                    className={`fa fa-fax ${
+                      isRealyDark ? "text-light" : "text-dark"
+                    } me-3`}
+                  ></i>
+                  <p
+                    className={`mb-0 ${
+                      isRealyDark ? "text-light" : "text-dark"
+                    }`}
+                  >
+                    (+966) 11 265 3066
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="d-flex flex-column align-items-center justify-content-center">
+              {" "}
               <div className="d-flex align-items-center">
                 <i
                   className={`fas fa-map-marker-alt ${
@@ -52,7 +85,7 @@ const Footer = () => {
                     isRealyDark ? "text-light" : "text-dark"
                   }`}
                 >
-                  123 Street New York.USA
+                  Malaz, Riyadh, Saudi Arabia
                 </p>
               </div>
               <div className="d-flex align-items-center">
@@ -64,19 +97,7 @@ const Footer = () => {
                 <p
                   className={`mb-0 ${isRealyDark ? "text-light" : "text-dark"}`}
                 >
-                  info@example.com
-                </p>
-              </div>
-              <div className="d-flex align-items-center">
-                <i
-                  className={`fa fa-phone-alt ${
-                    isRealyDark ? "text-light" : "text-dark"
-                  } me-3`}
-                ></i>
-                <p
-                  className={`mb-0 ${isRealyDark ? "text-light" : "text-dark"}`}
-                >
-                  (+012) 3456 7890
+                  info@ptech-sa.com
                 </p>
               </div>
             </div>

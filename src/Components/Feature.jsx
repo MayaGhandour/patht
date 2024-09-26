@@ -13,13 +13,8 @@ const Feature = () => {
             style={{ maxWidth: "800px" }}
           >
             <br />
-            <h1 className="display-5 mb-4 text-primary">
-              Our Value Proposition
-            </h1>
-            <p className="mb-0">
-              Experience Innovation and Excellence with PathTECH’s Unique
-              Solutions
-            </p>
+            <h1 className="display-5 mb-4 text-primary">{t("value.value")}</h1>
+            <p className="mb-0">{t("value.valueText")}</p>
           </div>
           <div className="row g-4">
             <div
@@ -30,12 +25,8 @@ const Feature = () => {
                 <div className="feature-icon p-4 mb-4">
                   <i className="fas fa-chart-line fa-4x text-primary"></i>
                 </div>
-                <h4>Innovative Solutions</h4>
-                <p className="mb-4">
-                  PathTECH offers cutting-edge solutions in Datacenter &
-                  Networking, Video Conference Systems, and Security, tailored
-                  to meet your business needs and ensure success.
-                </p>
+                <h4>{t("value.value1")}</h4>
+                <p className="mb-4">{t("value.valueText1")}</p>
               </div>
             </div>
             <div
@@ -46,12 +37,8 @@ const Feature = () => {
                 <div className="feature-icon p-4 mb-4">
                   <i className="fas fa-university fa-4x text-primary"></i>
                 </div>
-                <h4>Industry Collaboration</h4>
-                <p className="mb-4">
-                  Collaborating with technological leaders like Cisco, Huawei,
-                  and CommScope, PathTECH ensures top-notch quality and
-                  expertise in every project, setting new industry standards.
-                </p>
+                <h4>{t("value.value2")}</h4>
+                <p className="mb-4">{t("value.valueText2")}</p>
               </div>
             </div>
             <div
@@ -62,12 +49,8 @@ const Feature = () => {
                 <div className="feature-icon p-4 mb-4">
                   <i className="fas fa-file-alt fa-4x text-primary"></i>
                 </div>
-                <h4>Exceptional Services</h4>
-                <p className="mb-4">
-                  From Project Management Consultancy to Training & Coaching,
-                  PathTECH delivers exceptional services that transform visions
-                  into reality and drive business growth.
-                </p>
+                <h4>{t("value.value3")}</h4>
+                <p className="mb-4">{t("value.valueText3")}</p>
               </div>
             </div>
           </div>

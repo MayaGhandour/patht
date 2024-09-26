@@ -1,6 +1,6 @@
 import Aabout from "../Components/SecoundSection/Aabout";
 import Partners from "../Components/Partners";
-import Counter from "../Components/Counter";
+import Counter from "../Components/Counter/Counter";
 import Hero from "../Components/Hero/Hero";
 import SolutionsSection from "../Components/SolutionsSection";
 import ServicesSection from "../Components/ServicesSection/ServicesSection";

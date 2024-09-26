@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { motion, useInView } from "framer-motion";
 import "./Aabout.css"; // Ensure you include this CSS file
+import ShinyButton from "../ShinyButton/ShinyButton";
 
 const Aabout = () => {
   const { t, i18n } = useTranslation();
@@ -65,15 +66,8 @@ const Aabout = () => {
           >
             {t("about2.snip2")}
           </p>
-          {/* <ReactTyped
-            string={["web", "", ""]}
-            typeSpeed={50}
-            backSpeed={30}
-            loop
-            backDelay={1500}
-          /> */}
 
-          <ul>
+          {/* <ul>
             <li
               className={`${
                 isRealyDark
@@ -81,7 +75,7 @@ const Aabout = () => {
                   : "light-mode-text-gradient"
               }`}
             >
-              Design & Technical Proposal
+              {t("about2.li1")}
             </li>
             <li
               className={`${
@@ -90,7 +84,7 @@ const Aabout = () => {
                   : "light-mode-text-gradient"
               }`}
             >
-              Supply & Installation
+              {t("about2.li2")}
             </li>
             <li
               className={`${
@@ -99,7 +93,7 @@ const Aabout = () => {
                   : "light-mode-text-gradient"
               }`}
             >
-              Maintenance Contracts
+              {t("about2.li3")}
             </li>
             <li
               className={`${
@@ -108,13 +102,25 @@ const Aabout = () => {
                   : "light-mode-text-gradient"
               }`}
             >
-              Tenders & Bids
+              {t("about2.li4")}
             </li>
-          </ul>
+          </ul> */}
+          <ShinyButton />
         </motion.div>
 
         {/* Background Image Column */}
-        <motion.div className="col-md-6" variants={slideInRight}>
+        <motion.div
+          className="col-md-6"
+          variants={slideInRight}
+          animate={{
+            y: [0, -10, 0], // Simulates a slow vibration: moves up by 10px and then back down
+          }}
+          transition={{
+            duration: 4, // Slow movement (8 seconds for one full cycle)
+            repeat: Infinity, // Loop the animation infinitely
+            ease: "easeInOut", // Smooth transition between up and down
+          }}
+        >
           <div
             className="w-100 rounded"
             style={{

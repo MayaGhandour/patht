@@ -2,6 +2,7 @@
   "lang": "lang",
   "search": "search",
   "header": {
+    "home": "Home",
     "about": "About",
     "solutions": "Solutions",
     "services": "Services",
@@ -20,9 +21,13 @@
     "follow": "Follow Us"
   },
   "about2": {
-    "AboutPathTECH": "About PathTECH",
+    "AboutPathTECH": " PathTECH",
     "snip1": "PathTECH is a leading technical service provider in Riyadh, Saudi Arabia, with a legacy of over 25 years of experience, delivering advanced solutions and services nationwide.",
-    "snip2": " PathTECH is a System Integrator for many leading global vendors and cooperates with a long list of partners to provide many technical solutions and services such as"
+    "snip2": " PathTECH is a System Integrator for many leading global vendors and cooperates with a long list of partners to provide many technical solutions and services such as",
+    "li1": " Design & Technical Proposal",
+    "li2": " Supply & Installation",
+    "li3": " Maintenance Contracts",
+    "li4": " Tenders & Bids"
   },
   "solution": {
     "OurSolutions": "Our Solutions",
@@ -61,7 +66,9 @@
     "text1": "At PathTech, we are driven by a singular vision: to become the leading force in advanced technology across Saudi Arabia. Our commitment is to innovate and provide exceptional technological solutions that transform industries and improve lives.",
     "text2": "Complying with Saudi’s Vision 2030, PathTech’s dedication to innovation is unwavering. We invest heavily in research and development to stay ahead of the curve, ensuring our products and services are at the forefront of technological advancements. Our team of experts continuously explores new frontiers, pushing the boundaries of what is possible.",
     "text3": "We aim to revolutionize various sectors by integrating cutting-edge technology into everyday processes. From healthcare to finance, our solutions are designed to enhance efficiency, security, and productivity, creating a more connected and advanced society in Saudi Arabia.",
-    "text4": "Beyond industry transformation, PathTech is dedicated to improving the quality of life for individuals. Our technologies aim to provide better healthcare, smarter cities, and more sustainable practices, ensuring that every citizen can experience the benefits of our innovations.",
+    "text4": "Beyond industry transformation, PathTech is dedicated to improving the quality of life for individuals. Our technologies aim to provide better healthcare, smarter cities, and more sustainable practices, ensuring that every citizen can experience the benefits of our innovations."
+  },
+  "value": {
     "value": "Our Value Proposition",
     "valueText": "Experience Innovation and Excellence with PathTECH’s Unique Solutions",
     "value1": "Innovative Solutions",

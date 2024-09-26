@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { changeMode } from "../Redux/modeSlice";
 import "./Header.css";
-import logo1 from "../assets/Img/pathteachlogo.png"; // Light mode logo
+import logo1 from "../assets/Img/logoo-2.png"; // Light mode logo
 import logo2 from "../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -49,7 +49,7 @@ const Header = () => {
             <img
               src={isRealyDark ? logo2 : logo1} // Change logo based on mode
               alt="Logo"
-              style={{ width: "5vw", height: "5vw" }}
+              style={{ width: "7vw", height: "7vw" }}
             />
           </NavLink>
 
@@ -68,8 +68,33 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  to="/"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
+                  style={{
+                    color: isRealyDark ? "#fff" : "transparent", // White in dark mode
+                    background: isRealyDark
+                      ? "none"
+                      : "linear-gradient(#030b3d, #105abf)",
+                    WebkitBackgroundClip: isRealyDark ? "none" : "text", // Only apply gradient in light mode
+                    WebkitTextFillColor: isRealyDark ? "#fff" : "transparent", // Apply transparent fill in light mode
+                    fontWeight: "bold",
+                  }}
+                >
+                  {t("header.home")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
                   to="/about"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
                   style={{
                     color: isRealyDark ? "#fff" : "transparent", // White in dark mode
                     background: isRealyDark
@@ -83,9 +108,14 @@ const Header = () => {
                   {t("header.about")}
                 </NavLink>
               </li>
+
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
                   to="/Solutions"
                   style={{
                     color: isRealyDark ? "#fff" : "transparent", // White in dark mode
@@ -102,7 +132,11 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
                   to="/Services"
                   style={{
                     color: isRealyDark ? "#fff" : "transparent", // White in dark mode
@@ -119,7 +153,11 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
                   to="/Strategy"
                   style={{
                     color: isRealyDark ? "#fff" : "transparent", // White in dark mode
@@ -136,7 +174,11 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  className="nav-link"
+                  className={({ isActive }) =>
+                    `nav-link ${isRealyDark ? "light-active" : "dark-active"} ${
+                      isActive ? "active" : ""
+                    }`
+                  }
                   to="/ContactUs"
                   style={{
                     color: isRealyDark ? "#fff" : "transparent", // White in dark mode
@@ -161,7 +203,16 @@ const Header = () => {
                   placeholder={t("search")}
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success" type="submit">
+                <button
+                  className={`btn ${
+                    isRealyDark ? "btn-hover-dark" : "btn-hover"
+                  }`}
+                  type="submit"
+                  style={{
+                    color: isRealyDark ? "#d8faff" : "#030b3d",
+                    borderColor: isRealyDark ? "#d8faff" : "#030b3d",
+                  }}
+                >
                   {t("search")}
                 </button>
               </form>
