@@ -19,7 +19,7 @@ const ContactUs = () => {
                           </div>
                           <div>
                             <h4>Address</h4>
-                            <p className="mb-0">123 Street New York.USA</p>
+                            <p className="mb-0">Malaz, Riyadh, Saudi Arabia</p>
                           </div>
                         </div>
                       </div>
@@ -30,7 +30,7 @@ const ContactUs = () => {
                           </div>
                           <div>
                             <h4>Mail Us</h4>
-                            <p className="mb-0">info@example.com</p>
+                            <p className="mb-0"> info@ptech-sa.com</p>
                           </div>
                         </div>
                       </div>
@@ -41,7 +41,7 @@ const ContactUs = () => {
                           </div>
                           <div>
                             <h4>Telephone</h4>
-                            <p className="mb-0">(+012) 3456 7890</p>
+                            <p className="mb-0">(+966) 11 242 8436</p>
                           </div>
                         </div>
                       </div>
@@ -51,8 +51,8 @@ const ContactUs = () => {
                             <i className="fab fa-firefox-browser fa-2x"></i>
                           </div>
                           <div>
-                            <h4>Yoursite@ex.com</h4>
-                            <p className="mb-0">(+012) 3456 7890</p>
+                            <h4> ptech-sa.com</h4>
+                            <p className="mb-0"> (+966) 11 265 3066</p>
                           </div>
                         </div>
                       </div>

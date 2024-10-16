@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import img1 from "../../assets/Img/IMG-20240906-WA0027.jpg";
-import img2 from "../../assets/Img/IMG-20240906-WA0028.jpg";
-import img3 from "../../assets/Img/IMG-20240906-WA0032.jpg";
+import img1 from "../../assets/Img/path/Project Management Consulting.png";
+import img2 from "../../assets/Img/path/PMO Setup.png";
+import img3 from "../../assets/Img/path/Tenders & Bids.png";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import "./Services.css"; // Include CSS for gradient text

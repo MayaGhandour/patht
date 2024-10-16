@@ -90,7 +90,7 @@ const AboutStart = () => {
 
   return (
     <div dir={isRTL ? "rtl" : "ltr"}>
-      <div className="container-fluid about py-5">
+      <div className="container-fluid about ">
         <div className="container py-5">
           {/* First Row */}
           <div

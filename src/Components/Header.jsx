@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { changeMode } from "../Redux/modeSlice";
 import "./Header.css";
-import logo1 from "../assets/Img/logoo-2.png"; // Light mode logo
+import logo1 from "../assets/Img/pathteach_logo_dark_blue.png"; // Light mode logo
 import logo2 from "../assets/Img/pathteachlogo-whitecolor.png"; // Dark mode logo
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
@@ -31,17 +30,35 @@ const Header = () => {
       });
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Set the scroll state to true if the user scrolls more than 50px
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   // useEffect(() => {
   //   document.body.dir = i18n.language === "en" ? "ltr" : "rtl";
   // }, [i18n.language]);
 
   return (
-    <div className="px-4 pb-4" dir={i18n.language === "ar" ? "rtl" : "ltr"}>
+    <div className="px-4 " dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <nav
-        className="navbar navbar-expand-lg fixed-top py-0 px-4"
+        className={`navbar navbar-expand-lg fixed-top py-0 px-4 ${
+          isScrolled ? "navbar-scrolled" : ""
+        }`}
         style={{
           backdropFilter: "blur(5px)",
-          backgroundColor: isRealyDark ? "#030b3d" : "#fff", // Dynamic background color
+          backgroundColor: isRealyDark
+            ? `rgba(3, 11, 61, ${isScrolled ? 0.7 : 1})`
+            : `rgba(255, 255, 255, ${isScrolled ? 0.5 : 1})`, // Dynamic background color and opacity
         }}
       >
         <div className="container-fluid">
@@ -49,7 +66,7 @@ const Header = () => {
             <img
               src={isRealyDark ? logo2 : logo1} // Change logo based on mode
               alt="Logo"
-              style={{ width: "7vw", height: "7vw" }}
+              style={{ width: "5vw", height: "5vw" }}
             />
           </NavLink>
 

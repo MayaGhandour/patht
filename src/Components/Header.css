@@ -5,6 +5,7 @@ body {
 .dark-mode body {
   background-color: #030b3d;
 }
+
 .top-header {
   width: 100%;
   height: 5vh;
@@ -105,6 +106,14 @@ nav {
   padding: 10px;
   text-decoration: none;
   border: none; /* Remove border */
+}
+.navbar-scrolled {
+  background-color: rgba(3, 11, 61, 0.7); /* Dark mode with opacity */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-scrolled.light-mode {
+  background-color: rgba(255, 255, 255, 0.5); /* Light mode with opacity */
 }
 
 .nav-link.active {

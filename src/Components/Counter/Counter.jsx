@@ -94,7 +94,7 @@ const Counter = () => {
 
               <CountUp
                 end={item.count}
-                duration={4}
+                duration={10}
                 suffix={item.suffix}
                 style={{
                   color: isRealyDark ? "#d8faff" : "#030b3d", // Counter color

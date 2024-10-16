@@ -33,9 +33,9 @@ const Partners = () => {
       </h1>
       <div className="d-flex justify-content-center mb-5">
         <div
-          className={`ticker-container ${
-            isRealyDark ? "dark-mode-bg" : "light-mode-bg"
-          }`}
+          // className={`ticker-container ${
+          //   isRealyDark ? "dark-mode-bg" : "light-mode-bg"
+          // }`}
           style={{ width: "90vw" }}
         >
           {" "}

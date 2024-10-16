@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import CarouselImg from "../../assets/Img/carousel-1.jpg"; // Adjust the image path as needed
+import CarouselImg from "../../assets/Img/path/Low Current Systems.png"; // Adjust the image path as needed
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { motion, useInView } from "framer-motion";
@@ -124,7 +124,7 @@ const Aabout = () => {
           <div
             className="w-100 rounded"
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(18, 18, 18, 1)), url(${CarouselImg})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(25, 25, 25, 0.5)), url(${CarouselImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               height: "300px", // Adjust height based on your need

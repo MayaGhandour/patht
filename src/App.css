@@ -1,6 +1,12 @@
 /* Global Custom Scrollbar Styles */
 body {
-  /* You can add any other global styles for the body here */
+  background-color: hsla(235, 0%, 100%, 0.78);
+  /* background-image: radial-gradient(
+      at 100% 100%,
+      rgb(47, 61, 224) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 0% 0%, #071466 0px, transparent 50%); */
 }
 
 ::-webkit-scrollbar {

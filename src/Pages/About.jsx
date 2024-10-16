@@ -1,14 +1,15 @@
 import React from "react";
 import AboutStart from "../Components/AboutStart";
-import Feature from "../Components/Feature";
-import Team from "../Components/Team";
+
+import Slider2 from "../Components/Slider2/Slider2";
 
 const About = () => {
   return (
     <div>
       <AboutStart />
-      <Feature />
-      <Team />
+      {/* <Feature /> */}
+      <Slider2 />
+      {/* <Team /> */}
     </div>
   );
 };

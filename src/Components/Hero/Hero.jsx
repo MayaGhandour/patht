@@ -1,5 +1,5 @@
 import React from "react";
-import CarouselImg from "../../assets/Img/carousel-1.jpg";
+import CarouselImg from "../../assets/Img/pathtechb.g-12.png";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import "./Hero.css"; // Make sure to include a CSS file for the gradient styles
@@ -14,7 +14,7 @@ const Hero = () => {
         className="w-100 position-relative d-flex align-items-center rounded "
         dir={i18n.language === "ar" ? "rtl" : "ltr"}
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(85, 85, 85, 1)), url(${CarouselImg})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(18, 18, 18, 0), rgba(85, 85, 85, 0)), url(${CarouselImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "50vw",
