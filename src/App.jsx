@@ -11,8 +11,8 @@ function App() {
     <>
       <Provider store={store}>
         <I18nextProvider i18n={i18n}>
-          <RouterProvider router={router} />
-          {/* <RouterProvider router={router} basename="/patht" />{" "} */}
+          {/* <RouterProvider router={router} /> */}
+          <RouterProvider router={router} basename="/patht" />{" "}
         </I18nextProvider>
       </Provider>
     </>
